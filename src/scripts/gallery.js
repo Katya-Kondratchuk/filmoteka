@@ -12,17 +12,22 @@ function markupRandomFilms() {
         title,
         genre_ids,
         release_date,
+        backdrop_path,
         vote_average,
-      }) =>
+      }) => {
+        Loading.arrows();
         renderFilmList(
           poster_path,
           original_title,
           title,
           genre_ids,
           release_date,
+          backdrop_path,
           vote_average,
           findGenres
-        )
+        );
+        Loading.remove();
+      }
     )
   );
 }

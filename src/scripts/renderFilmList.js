@@ -7,12 +7,10 @@ export async function renderFilmList(
   title,
   genre_ids,
   release_date,
-  findGenres,
   backdrop_path,
   vote_average,
   findGenres
 ) {
-  Loading.arrows();
   const genreaMarkup = await findGenres(genre_ids).then(data =>
     data.join(', ')
   );
@@ -45,5 +43,4 @@ export async function renderFilmList(
       </div>
      </li>`
   );
-  Loading.remove();
 }

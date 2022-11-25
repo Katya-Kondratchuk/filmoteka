@@ -14,7 +14,6 @@ async function fetchRandomFilm(currentPage = 1) {
     const response = await axios.get(
       `${BASE_URL}/${discover_point}?api_key=${API_KEY}&page=${currentPage}&sort_by=popularity.desc`
     );
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error);
@@ -39,7 +38,7 @@ async function fetchSearchFilm(query) {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 }
 

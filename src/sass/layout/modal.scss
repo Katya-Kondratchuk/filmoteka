@@ -23,16 +23,16 @@
   align-items: center;
   margin-right: 8px;
   margin-top: 8px;
-  color: $logo-accent-color;
+  // color: $logo-accent-color;
   border-radius: 50%;
-  background: $primary-background-color;
+  // background: $primary-background-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $accent-color;
+  // }
 }
 
 .modal__icon-close {
