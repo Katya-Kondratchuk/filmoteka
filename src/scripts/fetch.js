@@ -31,10 +31,10 @@ async function fetchGenre() {
   }
 }
 
-async function fetchSearchFilm(query) {
+async function fetchSearchFilm(query, page = 1) {
   try {
     const response = await axios.get(
-      `${BASE_URL}/${search_point}?api_key=${API_KEY}&page=${currentPage}&query=${query}`
+      `${BASE_URL}/${search_point}?api_key=${API_KEY}&page=${page}&query=${query}`
     );
     return response.data;
   } catch (error) {
